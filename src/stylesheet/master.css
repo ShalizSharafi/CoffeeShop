@@ -16,31 +16,20 @@
   }
 }
 
+
+
 @theme {
-    --color-purple: #7322ff;
+   --color-purple: #7322ff;
     --color-lightgreen: #93f3aa;
     --color-pink: #fe7bff;
     --color-black: #1d1a40;
     --color-grey: #70758c;
     --color-light: #eaedf6;
     --color-white: #fff;
-}
-
-
-@theme {
-  --animate-marquee: marquee 10s ease-in-out  infinite;
-  @keyframes marquee {
-    0%,
-    100% {
-      transform: translatex(0)
-    }
-    50% {
-      transform: translatex(-80%)
-    }
-  }
-}
-@theme {
   --animate-marquee2: marquee2 10s ease-in-out  infinite;
+  --animate-rotate: rotate 10s linear alternate;
+  --animate-marquee: marquee 10s ease-in-out  infinite;
+
   @keyframes marquee2 {
     0%,
     100% {
@@ -50,6 +39,20 @@
       transform: translatex(0)
     }
   }
+  @keyframes rotate{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+  }
+  @keyframes marquee {
+    0%,
+    100% {
+      transform: translatex(0)
+    }
+    50% {
+      transform: translatex(-80%)
+    }
+  }
+  
 }
 
 @layer components{
@@ -59,4 +62,5 @@
               hover:shadow-gray-300 cursor-pointer
        }
 }
+
 
